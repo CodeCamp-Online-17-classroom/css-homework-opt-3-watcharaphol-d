@@ -15,3 +15,157 @@ body {
 }
 
 /* write code here */
+.hero {
+  width: 100%;
+  height: 100vh;
+  position: relative;
+  font-family: "Kanit", sans-serif;
+  /* make contentbox to be responsive */
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  padding: 70px;
+}
+
+.logo {
+  width: 170px;
+  height: 100px;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  background-color: #fff3;
+  backdrop-filter: blur(10px);
+  filter: drop-shadow(1px 1px 5px #000);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1;
+}
+
+.logo img {
+  width: 50%;
+}
+
+.sidebar {
+  width: 170px;
+  height: 100vh;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  background-color: #fff3;
+  filter: drop-shadow(1px 1px 5px #000);
+  backdrop-filter: blur(10px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.text-box {
+  transform: rotate(-90deg);
+  text-align: center;
+  color: #fff;
+  flex: 1;
+}
+
+.text-box h1 {
+  font-size: 28px;
+  font-weight: 500;
+}
+
+.text-box h4 {
+  margin: 7px 0px 10px;
+}
+
+.line {
+  width: 80%;
+  height: 1px;
+  margin: auto;
+  background-color: #fff;
+}
+
+.content {
+  /*============ Old code-Not Responsive ============*/
+  /* position: absolute;
+  right: 70px;
+  top: 50%;
+  transform: translateY(-50%); */
+  background-color: #0005;
+  backdrop-filter: blur(10px);
+  color: #fff;
+  padding: 30px 50px;
+}
+
+.content h1 {
+  font-size: 5rem;
+  line-height: 6rem;
+}
+
+.content p {
+  margin: 10px 0px 30px;
+}
+
+.btn {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  width: 170px;
+  padding: 10px;
+  background-color: #fff;
+  color: #000;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+}
+
+.btn:hover {
+  background-color: #eee;
+}
+
+.btn img {
+  display: inline-block;
+  height: 30px;
+}
+
+#backvideo {
+  position: absolute;
+  right: 0px;
+  bottom: 0px;
+}
+
+@media (min-aspect-ratio: 16/9) {
+  #backvideo {
+    width: 100%;
+    height: auto;
+  }
+}
+
+@media (max-aspect-ratio: 16/9) {
+  #backvideo {
+    width: auto;
+    height: 100%;
+  }
+}
+
+/* ================ Responsive ================ */
+@media (max-width:820px) {
+  .hero {
+    justify-content: center;
+  }
+
+  .sidebar {
+    width: 100%;
+    height: 100px;
+  }
+
+  .text-box {
+    transform: rotate(0deg);
+    padding-left: 170px;
+  }
+
+}
+
+@media (orientation: landscape) and (max-width:820px) {
+  .content {
+    margin-top: 100px;
+  }
+}
